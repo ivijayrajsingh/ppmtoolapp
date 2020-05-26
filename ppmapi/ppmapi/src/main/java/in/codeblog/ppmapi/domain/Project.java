@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
  * This is the domain class,
  * responsible as a data traveler object
  * 
- * @author vijay raj singh
+ * @author Vijay
  *
  */
 
@@ -49,7 +49,8 @@ public class Project {
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date updated_At;
 	
-
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "project")
+	private Backlog backlog;
 	public Project() {
 		super();
 	}
@@ -111,5 +112,10 @@ public class Project {
     protected void onUpdate(){
         this.updated_At = new Date();
     }
-
+	public Backlog getBacklog() {
+		return backlog;
+	}
+	public void setBacklog(Backlog backlog) {
+		this.backlog = backlog;
+	}
 }

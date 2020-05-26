@@ -27,6 +27,7 @@ import in.codeblog.ppmapi.service.ProjectService;
 @RequestMapping("/api/project")
 @CrossOrigin
 public class ProjectController {
+
 	@Autowired
 	private ProjectService projectService;
 
@@ -61,4 +62,5 @@ public class ProjectController {
 
 		return new ResponseEntity<String>("Project with ID: '" + projectId + "' was deleted", HttpStatus.OK);
 	}
+
 }
