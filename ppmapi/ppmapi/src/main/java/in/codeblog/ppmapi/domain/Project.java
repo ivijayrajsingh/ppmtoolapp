@@ -18,10 +18,10 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
- * This is the domain class that will be representing the project detail and
- * will be responsible as a data traveler object
+ * This is the domain class,
+ * responsible as a data traveler object
  * 
- * @author sharma.pankaj
+ * @author vijay raj singh
  *
  */
 
