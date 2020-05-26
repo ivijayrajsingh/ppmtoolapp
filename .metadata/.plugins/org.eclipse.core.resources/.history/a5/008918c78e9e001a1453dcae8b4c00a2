@@ -1,0 +1,5 @@
+package in.codeblog.ppmapi.domain;
+
+public class Project {
+
+}
